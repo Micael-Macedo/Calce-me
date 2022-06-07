@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 80px;
+
+}
+nav ul{
+    align-items: center;
+}
+
+nav a{
+    color: white !important;
+}
+nav a:hover{
+    color: brown !important;
+}
+nav img{
+    width: 10px;
+    height: 10px;
+}
+
+section{
+    margin-top: 20px;
+}
