@@ -5,6 +5,7 @@ var bp = require('body-parser');
 var app = express();
 
 var parcerias = [];
+var calcados = [];
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -15,13 +16,13 @@ app.use(bp.json());
 app.use(express.static('public'))
 
 app.get('/',function(request, response){
-    response.render('index');
+    response.render('index', {calcados});
 });
 app.get('/cadastro', function(request, response){
     response.render('cadastro');
 });
 app.get('/parcerias', function(request, response){
-    response.render('parcerias');
+    response.render('parcerias', {parcerias});
 });
 app.get('/cadastroparceria', function(request, response){
     response.render('cadastroparceria');
@@ -41,6 +42,22 @@ app.post('/cadastroparceria', function(request, response){
     };
     parcerias.push(parceria);
     response.render('parcerias', {parcerias});
+})
+app.post('/cadastro', function(request, response){
+    modelo = request.body.txtModelo 
+    cor = request.body.txtCor
+    descricao = request.body.txtDescricao
+    material = request.body.txtMaterial
+    valor = request.body.numValor
+    calcado = {
+        "modelo": modelo,
+        "cor": cor,
+        "descricao": descricao,
+        "material": material,
+        "valor": valor
+    }
+    calcados.push(calcado)
+    response.render('index', {calcados});
 })
 
 app.listen(3000);
