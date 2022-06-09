@@ -1,7 +1,16 @@
+:root{
+    --nav-bg: black;
+    --foot-bg: black;
+    --nav-a: white;
+    --nav-a-hover: rgb(161, 54, 54);
+    --foot-a: white;
+    --foot-a-hover: rgb(161, 54, 54);
+    --card-title-bg: rgb(161, 54, 54);
+}
 nav{
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: var(--nav-bg);
     height: 80px;
 
 }
@@ -9,17 +18,74 @@ nav ul{
     align-items: center;
 }
 
-nav a{
-    color: white !important;
+nav a{ 
+    color: var(--nav-a) !important;
 }
 nav a:hover{
-    color: brown !important;
-}
-nav img{
-    width: 10px;
-    height: 10px;
+    font-size: 20px !important;
+    color: var(--nav-a-hover) !important;
 }
 
+nav a, a:hover{
+    font-size: 20px !important; 
+    font-weight: 400;
+}
+nav img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
 section{
     margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    margin: 10px;
+}
+.card-body{
+    padding: 0 0 10px 0;
+}
+.card-title{
+    background-color: var(--card-title-bg);
+    text-align: center;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: var(--foot-bg);
+    
+    display: flex;
+    align-items: center;
+}
+
+.footer-autor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-autor img{
+    margin-right: 10px;
+    max-height: 30px;
+}
+
+.footer-autor a, a:hover{
+    font-size: 18px !important;
+    font-weight: 400;
+    color: var(--foot-a);
+    text-decoration: none;
+}
+.footer-autor a:hover{
+    color: var(--foot-a-hover);
 }
