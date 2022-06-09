@@ -1,11 +1,15 @@
 
-<a class="btn btn-primary" href="cadastroparceria">Adicionar Parceria</a>
-{{#each parcerias}}
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <p class="card-text">{{nome}}</p>
-    <p class="card-text">{{anos}}</p>
-    <p class="card-text">{{contato}}</p>
+<h1>Parcerias do Calce-me</h1>
+<div class="row">
+  {{#each parcerias}}
+  <div class="col-sm-6 col-lg-4 col-xl-3 mb-2">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title">Nome: {{nome}}</h3>
+        <p class="card-text">Anos de parceria: {{anos}}</p>
+        <p class="card-text">Contato: {{contato}}</p>
+      </div>
+    </div>
   </div>
+  {{/each}}
 </div>
-{{/each}}
