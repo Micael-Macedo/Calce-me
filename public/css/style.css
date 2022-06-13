@@ -57,9 +57,27 @@ h1{
     text-align: center;
 }
 #fabricacao{
-    height: 3200px;
+    height: 5000px;
 }
-
+#fabricacao {
+    text-align: justify;
+}
+.titulo-fabricacao{
+    font-size: 35px;
+    font-weight: 700;
+}
+#fabricacao ul, li{
+    font-size: 30px;
+    margin: 10px 0;
+}
+#fabricacao ul{
+    list-style-type: none;
+}
+#fabricacao img{
+    display: block;
+    margin: auto;
+    width: 25%;
+}
 footer{
     bottom: 0;
     left: 0;
