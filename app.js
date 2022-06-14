@@ -40,7 +40,9 @@ app.post('/cadastroparceria', function(request, response){
         "anos": anos,
         "contato": contato
     };
-    parcerias.push(parceria);
+    if(request.body.anos >= 1){
+        parcerias.push(parceria);
+    }
     response.redirect('/parcerias');
 })
 app.post('/cadastro', function(request, response){
