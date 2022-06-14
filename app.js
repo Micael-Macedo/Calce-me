@@ -41,7 +41,7 @@ app.post('/cadastroparceria', function(request, response){
         "contato": contato
     };
     parcerias.push(parceria);
-    response.render('parcerias', {parcerias});
+    response.redirect('/parcerias');
 })
 app.post('/cadastro', function(request, response){
     modelo = request.body.txtModelo 
@@ -56,8 +56,8 @@ app.post('/cadastro', function(request, response){
         "material": material,
         "valor": valor
     }
-    calcados.push(calcado)
-    response.render('index', {calcados});
+    calcados.push(calcado);
+    response.redirect('/');
 })
 
 app.listen(3000);
