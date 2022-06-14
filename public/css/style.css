@@ -50,14 +50,39 @@ h1{
     margin: 10px;
 }
 .card-body{
+    height: 200px;
     padding: 0 0 10px 0;
 }
+.card-body p{
+    font-size: 20px;
+    margin: 5px 10px;
+}
 .card-title{
+    font-size: 25px;
     background-color: var(--card-title-bg);
     text-align: center;
 }
+#card-novas-parcerias{
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+#card-novas-parcerias a{
+    margin-top: 50px;
+    background-color: black;
+    border: black;
+    transition: 0.5s;
+}
+#card-novas-parcerias a, a:hover{
+    font-weight: 600;
+}
+#card-novas-parcerias a:hover{
+    border: black;
+    background-color: rgb(161, 54, 54);
+    
+}
 #fabricacao{
-    height: 5800px;
+    height: 5500px;
 }
 #fabricacao {
     text-align: justify;
@@ -78,6 +103,16 @@ h1{
     margin: auto;
     width: 25%;
 }
+#fabricacao a:hover{
+    font-size: 30px !important;
+    color: var(--nav-a-hover) !important;
+}
+
+#fabricacao a, a:hover{
+    font-size: 30px !important; 
+    font-weight: 400;
+}
+
 footer{
     bottom: 0;
     left: 0;
